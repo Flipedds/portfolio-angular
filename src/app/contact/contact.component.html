@@ -1,6 +1,12 @@
 <main
-  class="bg-gradient-to-r from-yellow-300  to-purple-500
-  w-full size-4/5 fixed top-0 flex flex-col"
+  class="bg-gradient-to-r from-purple-500 to-yellow-300 w-full size-4/5 fixed top-0 flex flex-col"
 >
   <h1 class="font-extrabold text-8xl ml-4">Contact</h1>
+  <div
+    class="w-full h-auto py-8 flex items-start justify-start gap-2 flex-wrap ml-4"
+  >
+    @for(contact of contacts; track contact){
+      <contact-link [contact]="contact"></contact-link>
+    }
+  </div>
 </main>

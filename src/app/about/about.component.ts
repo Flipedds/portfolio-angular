@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   selector: 'app-about',
   standalone: true,
   imports: [
-    CommonModule,
-  ],
+    CommonModule
+],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
 })
