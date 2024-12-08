@@ -30,7 +30,8 @@ export class ProjectsComponent implements OnInit {
           "simplifica-ai",
           "zero-front",
           "ia-desempenho_modelos",
-          "portfolio-angular"].includes(project.name.toString())
-      ))
-  }
+          "portfolio-angular",
+          "prototipo"].includes(project.name.toString())
+      ).map(project => project.name === "prototipo" ? { ...project, language: "Python - HTML - CSS - JavaScript" } : project)
+  )}
 }
