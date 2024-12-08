@@ -10,6 +10,6 @@ export class ProjectsService {
   constructor() { }
 
   getProjects() {
-    return this.http.get<Project[]>("https://api.github.com/users/Flipedds/repos?per_page=17&sort=created")
+    return this.http.get<Project[]>("https://api.github.com/users/Flipedds/repos?per_page=50&sort=created")
   }
 }

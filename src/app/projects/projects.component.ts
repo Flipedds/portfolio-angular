@@ -21,6 +21,16 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.projectsService.getProjects().subscribe(projects =>
-      this.projects = projects)
+      this.projects = projects.filter(project =>
+        ["chatbot-uex",
+          "amparo-android-compose",
+          "crud-neo4j",
+          "maven-search",
+          "mongo-projeto",
+          "simplifica-ai",
+          "zero-front",
+          "ia-desempenho_modelos",
+          "portfolio-angular"].includes(project.name.toString())
+      ))
   }
 }
